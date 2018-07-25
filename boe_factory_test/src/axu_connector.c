@@ -26,5 +26,5 @@ int make_package(A_Package *ask, A_Package *res, u16 cmd)
 	res->magic = ask->magic;
 	res->cmd  = cmd;
 	res->pid  = ask->pid;
-	return 0;
+	return sizeof(A_Package);
 }

@@ -591,6 +591,44 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 2
+
+/* Definitions for peripheral AXI_GPIO_0 */
+#define XPAR_AXI_GPIO_0_BASEADDR 0xA0001000
+#define XPAR_AXI_GPIO_0_HIGHADDR 0xA0001FFF
+#define XPAR_AXI_GPIO_0_DEVICE_ID 0
+#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_0_IS_DUAL 0
+
+
+/* Definitions for peripheral AXI_GPIO_1 */
+#define XPAR_AXI_GPIO_1_BASEADDR 0xA0002000
+#define XPAR_AXI_GPIO_1_HIGHADDR 0xA0002FFF
+#define XPAR_AXI_GPIO_1_DEVICE_ID 1
+#define XPAR_AXI_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_1_IS_DUAL 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_GPIO_0 */
+#define XPAR_GPIO_0_BASEADDR 0xA0001000
+#define XPAR_GPIO_0_HIGHADDR 0xA0001FFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_0_IS_DUAL 0
+
+/* Canonical definitions for peripheral AXI_GPIO_1 */
+#define XPAR_GPIO_1_BASEADDR 0xA0002000
+#define XPAR_GPIO_1_HIGHADDR 0xA0002FFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
+#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_1_IS_DUAL 0
+
+
+/******************************************************************/
+
 /* Definitions for driver GPIOPS */
 #define XPAR_XGPIOPS_NUM_INSTANCES 1
 
@@ -702,15 +740,15 @@
 /* Definitions for driver LLFIFO */
 #define XPAR_XLLFIFO_NUM_INSTANCES 1U
 
-/* Definitions for peripheral AXI_FIFO_MM_S_0 */
-#define XPAR_AXI_FIFO_MM_S_0_DEVICE_ID 0U
-#define XPAR_AXI_FIFO_MM_S_0_BASEADDR 0xA0000000U
-#define XPAR_AXI_FIFO_MM_S_0_HIGHADDR 0xA0000FFFU
-#define XPAR_AXI_FIFO_MM_S_0_AXI4_BASEADDR 0U
-#define XPAR_AXI_FIFO_MM_S_0_AXI4_HIGHADDR 0U
-#define XPAR_AXI_FIFO_MM_S_0_DATA_INTERFACE_TYPE 0U
+/* Definitions for peripheral AXI2AXIS_AXI_FIFO_MM_S_0 */
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_DEVICE_ID 0U
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_BASEADDR 0xA0000000U
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_HIGHADDR 0xA0000FFFU
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_AXI4_BASEADDR 0U
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_AXI4_HIGHADDR 0U
+#define XPAR_AXI2AXIS_AXI_FIFO_MM_S_0_DATA_INTERFACE_TYPE 0U
 
-/* Canonical definitions for peripheral AXI_FIFO_MM_S_0 */
+/* Canonical definitions for peripheral AXI2AXIS_AXI_FIFO_MM_S_0 */
 #define XPAR_AXI_FIFO_0_DEVICE_ID 0U
 #define XPAR_AXI_FIFO_0_BASEADDR 0xA0000000U
 #define XPAR_AXI_FIFO_0_HIGHADDR 0xA0000FFFU
@@ -792,12 +830,12 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to psu_acpu_gic */
-#define XPAR_FABRIC_AXI_FIFO_MM_S_0_INTERRUPT_INTR 121U
+#define XPAR_FABRIC_AXI2AXIS_AXI_FIFO_MM_S_0_INTERRUPT_INTR 121U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to psu_acpu_gic */
-#define XPAR_FABRIC_LLFIFO_0_VEC_ID XPAR_FABRIC_AXI_FIFO_MM_S_0_INTERRUPT_INTR
+#define XPAR_FABRIC_LLFIFO_0_VEC_ID XPAR_FABRIC_AXI2AXIS_AXI_FIFO_MM_S_0_INTERRUPT_INTR
 
 /******************************************************************/
 

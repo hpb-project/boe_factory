@@ -37,7 +37,7 @@ static void ledFailed()
 		ledHigh(LED_ALL);
 		usleep(200000);
 		ledLow(LED_ALL);
-		usleep(200000);
+		usleep(100000);
 	}
 }
 
@@ -66,7 +66,7 @@ int mainloop(void)
                 }else if(cmd == REQ_FLASH_TEST){
                 	ret = flashtest();
                 }else if(cmd == REQ_DRAM_TEST){
-                	ret = dramtest();
+                	ret = memtest();
                 }else if(cmd == REQ_NET_TEST){
                 	ret = pl_net_test();
                 }else if(cmd == REQ_RESULT){
@@ -81,7 +81,7 @@ int mainloop(void)
 					wlen = make_package(rcv, send, RET_SUCCES);
 				else
 					wlen = make_package(rcv, send, RET_FAILED);
-                msg_pool_txsend(&gMsgIns, send, wlen);
+                msg_pool_txsend(gMsgIns, send, wlen+60);
             }else{
             	xil_printf("package check failed\r\n");
             }

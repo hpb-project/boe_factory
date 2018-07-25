@@ -13,8 +13,25 @@ static u8 SourceAddress[10*1024*1024] __attribute__ ((aligned(32)));
 
 #define TEST 7
 
+//#define DUMMY_SD
+
+extern int ffs_init(void)
+{
+	FATFS fatfs;
+	FRESULT Res;
+	TCHAR *Path = "0:/";
+	Res = f_mount(&fatfs, Path, 0);
+	if (Res != FR_OK) {
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
 extern int ffs_sd_test(void)
 {
+#ifdef DUMMY_SD
+	return 0;
+#endif
 	FIL fil;
 	FRESULT Res;
 	UINT NumBytesRead;
@@ -39,6 +56,8 @@ extern int ffs_sd_test(void)
 	 * be in Read Only mode.
 	 */
 	SD_File = (char *)FileName;
+
+	ffs_init();
 
 	Res = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
 	if (Res) {

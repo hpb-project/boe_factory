@@ -8,36 +8,36 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/axu_connector.c \
-../src/common_functions.c \
 ../src/community.c \
 ../src/flashtest.c \
 ../src/led.c \
 ../src/main.c \
-../src/memtest.c \
+../src/memory_config_g.c \
+../src/memorytest.c \
 ../src/pl_eth_test.c \
 ../src/platform.c \
 ../src/sdtest.c 
 
 OBJS += \
 ./src/axu_connector.o \
-./src/common_functions.o \
 ./src/community.o \
 ./src/flashtest.o \
 ./src/led.o \
 ./src/main.o \
-./src/memtest.o \
+./src/memory_config_g.o \
+./src/memorytest.o \
 ./src/pl_eth_test.o \
 ./src/platform.o \
 ./src/sdtest.o 
 
 C_DEPS += \
 ./src/axu_connector.d \
-./src/common_functions.d \
 ./src/community.d \
 ./src/flashtest.d \
 ./src/led.d \
 ./src/main.d \
-./src/memtest.d \
+./src/memory_config_g.d \
+./src/memorytest.d \
 ./src/pl_eth_test.d \
 ./src/platform.d \
 ./src/sdtest.d 

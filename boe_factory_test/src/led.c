@@ -1,5 +1,5 @@
 /***************************** Include Files *********************************/
-#define DUMMY_LED
+//#define DUMMY_LED
 #ifndef DUMMY_LED
 #include "xparameters.h"
 #include "xgpio.h"

@@ -16,7 +16,7 @@ src/xfsbl_hooks.o src/xfsbl_hooks.o: ../src/xfsbl_hooks.c \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_printf.h \
  ../src/xfsbl_error.h ../src/xfsbl_hooks.h ../src/xfsbl_misc.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_exception.h \
- /home/luxq/workspace/boe_factory/psu_init.h
+ /home/luxq/work/boe_factory/boe_factory/psu_init.h
 
 ../src/xfsbl_hw.h:
 
@@ -58,4 +58,4 @@ src/xfsbl_hooks.o src/xfsbl_hooks.o: ../src/xfsbl_hooks.c \
 
 ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_exception.h:
 
-/home/luxq/workspace/boe_factory/psu_init.h:
+/home/luxq/work/boe_factory/boe_factory/psu_init.h:

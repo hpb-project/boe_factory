@@ -17,7 +17,7 @@ src/xfsbl_handoff.o src/xfsbl_handoff.o: ../src/xfsbl_handoff.c \
  ../src/xfsbl_error.h ../src/xfsbl_hooks.h ../src/xfsbl_misc.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_exception.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_cache.h \
- /home/luxq/workspace/boe_factory/psu_init.h ../src/xfsbl_main.h \
+ /home/luxq/work/boe_factory/boe_factory/psu_init.h ../src/xfsbl_main.h \
  ../src/xfsbl_image_header.h ../src/xfsbl_misc_drivers.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xplatform_info.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h
@@ -64,7 +64,7 @@ src/xfsbl_handoff.o src/xfsbl_handoff.o: ../src/xfsbl_handoff.c \
 
 ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_cache.h:
 
-/home/luxq/workspace/boe_factory/psu_init.h:
+/home/luxq/work/boe_factory/boe_factory/psu_init.h:
 
 ../src/xfsbl_main.h:
 

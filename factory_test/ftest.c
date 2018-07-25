@@ -1,4 +1,4 @@
-// Last Update:2018-07-24 21:57:51
+// Last Update:2018-07-25 20:58:06
 /**
  * @file rstest.c
  * @brief 
@@ -60,7 +60,7 @@ int make_package_net_test(Package *p)
     return sizeof(Package);
 }
 
-int make_package_dramtest(Package *p)
+int make_package_memtest(Package *p)
 {
     p->pid = get_pid();
     p->magic = MAGIC;
@@ -101,6 +101,7 @@ int _do(RSContext *rs, MK_PKG func, int timeout_s)
     memset(tx, 0x0, sizeof(tx));
     memset(rx, 0x0, sizeof(rx));
     wlen = func(p);
+    rlen = sizeof(rx);
     if(RSWrite(rs, tx, wlen) < 0)
     {
         printf("RSWrite failed.\n");
@@ -172,19 +173,21 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    ret = _do(&rs, make_package_conn, 1);
+    ret = _do(&rs, make_package_conn, 10);
     if(ret != 0)
     {
         printf("connect failed.\n");
         goto failed;
     }
+    printf("connect success.\n");
 
-    ret = _do(&rs, make_package_dramtest, 60);
+    ret = _do(&rs, make_package_memtest, 60);
     if(ret != 0)
     {
-        printf("dramtest failed.\n");
+        printf("memtest failed.\n");
         goto failed;
     }
+    printf("memtest success.\r\n");
 
     ret = _do(&rs, make_package_sd_test, 60);
     if(ret != 0)
@@ -192,6 +195,7 @@ int main(int argc, char *argv[])
         printf("sdtest failed.\n");
         goto failed;
     }
+    printf("sdtest success.\n");
 
     ret = _do(&rs, make_package_flash_test, 60);
     if(ret != 0)
@@ -199,13 +203,14 @@ int main(int argc, char *argv[])
         printf("flashtest failed.\n");
         goto failed;
     }
+    printf("flashtest success.\n");
     goto success;
 
 failed:
     result = 1;
-    _do(&rs, make_package_result, 1);
+    _do(&rs, make_package_result, 2);
 success:
-    _do(&rs, make_package_finish, 1);
+    _do(&rs, make_package_finish, 2);
 
     RSRelease(&rs);
     return ret;

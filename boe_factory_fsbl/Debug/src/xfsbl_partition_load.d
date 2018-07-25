@@ -36,7 +36,7 @@ src/xfsbl_partition_load.o src/xfsbl_partition_load.o: \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xsecure_aes.h \
  ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xcsudma.h \
  ../src/xfsbl_bs.h ../src/xfsbl_csu_dma.h \
- /home/luxq/workspace/boe_factory/psu_init.h \
+ /home/luxq/work/boe_factory/boe_factory/psu_init.h \
  ../src/xfsbl_plpartition_valid.h
 
 ../../boe_factory_fsbl_bsp/psu_cortexa53_0/include/xil_cache.h:
@@ -121,6 +121,6 @@ src/xfsbl_partition_load.o src/xfsbl_partition_load.o: \
 
 ../src/xfsbl_csu_dma.h:
 
-/home/luxq/workspace/boe_factory/psu_init.h:
+/home/luxq/work/boe_factory/boe_factory/psu_init.h:
 
 ../src/xfsbl_plpartition_valid.h:

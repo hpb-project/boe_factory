@@ -7,7 +7,7 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
-/home/luxq/workspace/boe_factory/psu_init.c \
+../src/psu_init.c \
 ../src/xfsbl_authentication.c \
 ../src/xfsbl_board.c \
 ../src/xfsbl_bs.c \
@@ -84,24 +84,17 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/psu_init.o: /home/luxq/workspace/boe_factory/psu_init.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/workspace/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/workspace/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/work/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/workspace/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/work/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
