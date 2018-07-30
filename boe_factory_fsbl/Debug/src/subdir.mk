@@ -87,14 +87,14 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/work/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/work/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	aarch64-none-elf-gcc -DARMA53_64 -Wall -O0 -g3 -I"/home/luxq/boe_factory/boe_factory" -c -fmessage-length=0 -MT"$@" -Os -flto -ffat-lto-objects -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

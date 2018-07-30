@@ -181,7 +181,7 @@ int main(int argc, char *argv[])
     }
     printf("connect success.\n");
 
-    ret = _do(&rs, make_package_memtest, 60);
+    ret = _do(&rs, make_package_memtest, 80);
     if(ret != 0)
     {
         printf("memtest failed.\n");
