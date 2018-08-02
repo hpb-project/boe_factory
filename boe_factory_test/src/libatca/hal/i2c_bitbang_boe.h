@@ -99,13 +99,13 @@ extern uint8_t pin_scl;
 #   define ENABLE_INTERRUPT()    {}
 
 
-#define I2C_CLOCK_DELAY_WRITE_LOW()  usleep(20)
-#define I2C_CLOCK_DELAY_WRITE_HIGH() usleep(20)
-#define I2C_CLOCK_DELAY_READ_LOW()   usleep(20)
-#define I2C_CLOCK_DELAY_READ_HIGH()  usleep(20)
-#define I2C_CLOCK_DELAY_SEND_ACK()   usleep(20)
+#define I2C_CLOCK_DELAY_WRITE_LOW()  usleep(40)
+#define I2C_CLOCK_DELAY_WRITE_HIGH() usleep(40)
+#define I2C_CLOCK_DELAY_READ_LOW()   usleep(40)
+#define I2C_CLOCK_DELAY_READ_HIGH()  usleep(40)
+#define I2C_CLOCK_DELAY_SEND_ACK()   usleep(40)
 //! This delay is inserted to make the Start and Stop hold time at least 250 ns.
-#define I2C_HOLD_DELAY()    usleep(20)
+#define I2C_HOLD_DELAY()    usleep(40)
 
 
 

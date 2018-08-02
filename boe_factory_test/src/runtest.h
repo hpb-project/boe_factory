@@ -12,6 +12,6 @@ extern int ffs_sd_test(void);
 extern int flashtest(void);
 extern int memtest(void);
 extern int pl_net_test(void);
-extern void at508_test(void);
+extern int at508_test(void);
 
 #endif /* SRC_RUNTEST_H_ */

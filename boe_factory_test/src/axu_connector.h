@@ -27,8 +27,9 @@
 #define REQ_DRAM_TEST    (0x3)
 #define REQ_NET_TEST     (0x4)
 #define REQ_CONNECT      (0x5)
-#define REQ_RESULT       (0x6)
-#define REQ_FINISH 		 (0x7)
+#define REQ_ECC_TEST     (0x6)
+#define REQ_RESULT       (0x7)
+#define REQ_FINISH 		 (0x8)
 
 
 #define RET_FAILED (0x1)

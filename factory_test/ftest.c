@@ -1,4 +1,4 @@
-// Last Update:2018-07-25 20:58:06
+// Last Update:2018-08-02 22:14:50
 /**
  * @file rstest.c
  * @brief 
@@ -16,8 +16,9 @@
 #define REQ_DRAM_TEST    (0x3)
 #define REQ_NET_TEST     (0x4)
 #define REQ_CONNECT      (0x5)
-#define REQ_RESULT       (0x6)
-#define REQ_FINISH       (0x7)
+#define REQ_ECC_TEST     (0x6)
+#define REQ_RESULT       (0x7)
+#define REQ_FINISH       (0x8)
 
 
 #define RET_FAILED       (0x1)
@@ -65,6 +66,14 @@ int make_package_memtest(Package *p)
     p->pid = get_pid();
     p->magic = MAGIC;
     p->cmd   = REQ_DRAM_TEST;
+    return sizeof(Package);
+}
+
+int make_package_ecc_test(Package *p)
+{
+    p->pid = get_pid();
+    p->magic = MAGIC;
+    p->cmd   = REQ_ECC_TEST;
     return sizeof(Package);
 }
 
@@ -189,13 +198,13 @@ int main(int argc, char *argv[])
     }
     printf("memtest success.\r\n");
 
-    ret = _do(&rs, make_package_sd_test, 60);
-    if(ret != 0)
-    {
-        printf("sdtest failed.\n");
-        goto failed;
-    }
-    printf("sdtest success.\n");
+//    ret = _do(&rs, make_package_sd_test, 60);
+//    if(ret != 0)
+//    {
+//        printf("sdtest failed.\n");
+//        goto failed;
+//    }
+//    printf("sdtest success.\n");
 
     ret = _do(&rs, make_package_flash_test, 60);
     if(ret != 0)
@@ -204,6 +213,14 @@ int main(int argc, char *argv[])
         goto failed;
     }
     printf("flashtest success.\n");
+
+    ret = _do(&rs, make_package_ecc_test, 60);
+    if(ret != 0)
+    {
+        printf("atecc test failed.\n");
+        goto failed;
+    }
+    printf("atecctest success.\n");
     goto success;
 
 failed:

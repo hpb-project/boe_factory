@@ -210,7 +210,7 @@ void i2c_send_ack(uint8_t ack)
             ;
         }
     }
-
+    I2C_CLOCK_DELAY_SEND_ACK();
     //! Clock out acknowledgment.
     I2C_CLOCK_HIGH();
     I2C_CLOCK_DELAY_SEND_ACK();
@@ -340,6 +340,7 @@ uint8_t i2c_receive_one_byte(uint8_t ack)
     DISABLE_INTERRUPT();
 
     I2C_SET_INPUT();
+    I2C_CLOCK_DELAY_READ_HIGH();
     for (i = 0x80, i2c_byte = 0; i; i >>= 1)
     {
         I2C_CLOCK_HIGH();
