@@ -29,6 +29,12 @@
 									<listOptionValue builtIn="false" value="../../boe_factory_fsbl_bsp/psu_cortexa53_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.562349181" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="    " valueType="string"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.453314110" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/luxq/work/boe_factory/boe_factory_test/src/libatca"/>
+								</option>
+								<option id="xilinx.gnu.compiler.symbols.defined.1832676414" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="ATCAPRINTF"/>
+								</option>
 								<inputType id="xilinx.gnu.arm.a53.c.compiler.input.1365896986" name="C source files" superClass="xilinx.gnu.arm.a53.c.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.arm.a53.cxx.toolchain.compiler.debug.306096353" name="ARM v8 g++ compiler" superClass="xilinx.gnu.arm.a53.cxx.toolchain.compiler.debug">
@@ -52,7 +58,7 @@
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group"/>
 								</option>
 								<option id="xilinx.gnu.c.linker.option.lscript.1280329847" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
-								<option id="xilinx.gnu.c.link.option.libs.1357198512" superClass="xilinx.gnu.c.link.option.libs" valueType="libs">
+								<option id="xilinx.gnu.c.link.option.libs.1357198512" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="m"/>
 								</option>
 								<inputType id="xilinx.gnu.linker.input.1084800823" superClass="xilinx.gnu.linker.input">

@@ -110,9 +110,17 @@ int main()
     // 系统启动，亮第一个灯
     ledHigh(LED_1);
 
+#if 1 // do test
+    at508_test();
+#else
+
     // 3. enter mainloop.
     mainloop();
-
+#endif
+    while(1){
+    	sleep(1);
+    	xil_printf("Hello wwwwww.\r\n");
+    }
 
     cleanup_platform();
     return 0;

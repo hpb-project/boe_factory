@@ -98,7 +98,6 @@ s32 Xil_TestMem32(u32 *Addr, u32 Words, u32 Pattern, u8 Subtest)
 	u32 FirtVal;
 	u32 WordMem32;
 	s32 Status = 0;
-	xil_printf("Words is %x\r\n", Words);
 
 	Xil_AssertNonvoid(Words != (u32)0);
 	Xil_AssertNonvoid(Subtest <= (u8)XIL_TESTMEM_MAXTEST);

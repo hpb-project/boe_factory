@@ -17,4 +17,12 @@ ELFSIZE :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src \
+src/libatca \
+src/libatca/atcacert \
+src/libatca/basic \
+src/libatca/crypto \
+src/libatca/crypto/hashes \
+src/libatca/hal \
+src/libatca/host \
+src/libatca/jwt \
 

@@ -8,6 +8,14 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/libatca/jwt/subdir.mk
+-include src/libatca/host/subdir.mk
+-include src/libatca/hal/subdir.mk
+-include src/libatca/crypto/hashes/subdir.mk
+-include src/libatca/crypto/subdir.mk
+-include src/libatca/basic/subdir.mk
+-include src/libatca/atcacert/subdir.mk
+-include src/libatca/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

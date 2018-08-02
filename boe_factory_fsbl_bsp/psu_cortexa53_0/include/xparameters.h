@@ -27,8 +27,8 @@
 /* Number of Fabric Resets */
 #define XPAR_NUM_FABRIC_RESETS 1
 
-#define STDIN_BASEADDRESS 0xFF000000
-#define STDOUT_BASEADDRESS 0xFF000000
+#define STDIN_BASEADDRESS 0xFE800000
+#define STDOUT_BASEADDRESS 0xFE800000
 
 /******************************************************************/
 
@@ -649,17 +649,10 @@
 /******************************************************************/
 
 /* Definitions for driver IICPS */
-#define XPAR_XIICPS_NUM_INSTANCES 2
-
-/* Definitions for peripheral PSU_I2C_0 */
-#define XPAR_PSU_I2C_0_DEVICE_ID 0
-#define XPAR_PSU_I2C_0_BASEADDR 0xFF020000
-#define XPAR_PSU_I2C_0_HIGHADDR 0xFF02FFFF
-#define XPAR_PSU_I2C_0_I2C_CLK_FREQ_HZ 100000000
-
+#define XPAR_XIICPS_NUM_INSTANCES 1
 
 /* Definitions for peripheral PSU_I2C_1 */
-#define XPAR_PSU_I2C_1_DEVICE_ID 1
+#define XPAR_PSU_I2C_1_DEVICE_ID 0
 #define XPAR_PSU_I2C_1_BASEADDR 0xFF030000
 #define XPAR_PSU_I2C_1_HIGHADDR 0xFF03FFFF
 #define XPAR_PSU_I2C_1_I2C_CLK_FREQ_HZ 100000000
@@ -667,17 +660,11 @@
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral PSU_I2C_0 */
-#define XPAR_XIICPS_0_DEVICE_ID XPAR_PSU_I2C_0_DEVICE_ID
-#define XPAR_XIICPS_0_BASEADDR 0xFF020000
-#define XPAR_XIICPS_0_HIGHADDR 0xFF02FFFF
-#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 100000000
-
 /* Canonical definitions for peripheral PSU_I2C_1 */
-#define XPAR_XIICPS_1_DEVICE_ID XPAR_PSU_I2C_1_DEVICE_ID
-#define XPAR_XIICPS_1_BASEADDR 0xFF030000
-#define XPAR_XIICPS_1_HIGHADDR 0xFF03FFFF
-#define XPAR_XIICPS_1_I2C_CLK_FREQ_HZ 100000000
+#define XPAR_XIICPS_0_DEVICE_ID XPAR_PSU_I2C_1_DEVICE_ID
+#define XPAR_XIICPS_0_BASEADDR 0xFF030000
+#define XPAR_XIICPS_0_HIGHADDR 0xFF03FFFF
+#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 100000000
 
 
 /******************************************************************/

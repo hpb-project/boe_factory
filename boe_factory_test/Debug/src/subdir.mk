@@ -7,6 +7,7 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/atca_test.c \
 ../src/axu_connector.c \
 ../src/community.c \
 ../src/flashtest.c \
@@ -19,6 +20,7 @@ C_SRCS += \
 ../src/sdtest.c 
 
 OBJS += \
+./src/atca_test.o \
 ./src/axu_connector.o \
 ./src/community.o \
 ./src/flashtest.o \
@@ -31,6 +33,7 @@ OBJS += \
 ./src/sdtest.o 
 
 C_DEPS += \
+./src/atca_test.d \
 ./src/axu_connector.d \
 ./src/community.d \
 ./src/flashtest.d \
@@ -47,7 +50,7 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v8 gcc compiler'
-	aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	aarch64-none-elf-gcc -DATCAPRINTF -Wall -O0 -g3 -I/home/luxq/work/boe_factory/boe_factory_test/src/libatca -c -fmessage-length=0 -MT"$@" -I../../boe_factory_fsbl_bsp/psu_cortexa53_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
