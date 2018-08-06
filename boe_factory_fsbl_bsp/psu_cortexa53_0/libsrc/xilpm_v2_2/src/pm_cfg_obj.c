@@ -182,7 +182,7 @@ const u32 XPm_ConfigObject[] __attribute__((used, section(".sys_cfg_data"))) = {
 
 	NODE_UART_1,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
-	PM_CONFIG_IPI_PSU_CORTEXA53_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_1_MASK, /* IPI Mask */
+	0U, /* IPI Mask */
 
 	NODE_SPI_0,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
@@ -194,11 +194,11 @@ const u32 XPm_ConfigObject[] __attribute__((used, section(".sys_cfg_data"))) = {
 
 	NODE_I2C_0,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
-	0U, /* IPI Mask */
+	PM_CONFIG_IPI_PSU_CORTEXA53_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_1_MASK, /* IPI Mask */
 
 	NODE_I2C_1,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
-	PM_CONFIG_IPI_PSU_CORTEXA53_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_1_MASK, /* IPI Mask */
+	0U, /* IPI Mask */
 
 	NODE_SD_0,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
@@ -238,7 +238,7 @@ const u32 XPm_ConfigObject[] __attribute__((used, section(".sys_cfg_data"))) = {
 
 	NODE_CAN_1,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
-	PM_CONFIG_IPI_PSU_CORTEXA53_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_0_MASK| PM_CONFIG_IPI_PSU_CORTEXR5_1_MASK, /* IPI Mask */
+	0U, /* IPI Mask */
 
 	NODE_EXTERN,
 	PM_SLAVE_FLAG_IS_SHAREABLE,
@@ -329,7 +329,7 @@ const u32 XPm_ConfigObject[] __attribute__((used, section(".sys_cfg_data"))) = {
 	PM_CAP_ACCESS | PM_CAP_CONTEXT, /* Current Requirements */
 	PM_CAP_ACCESS | PM_CAP_CONTEXT, /* Default Requirements */
 
-	NODE_I2C_1,
+	NODE_I2C_0,
 	PM_MASTER_USING_SLAVE_MASK, /* Master is using Slave */
 	PM_CAP_ACCESS | PM_CAP_CONTEXT, /* Current Requirements */
 	PM_CAP_ACCESS | PM_CAP_CONTEXT, /* Default Requirements */

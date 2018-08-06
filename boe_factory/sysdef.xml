@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="3" DIGEST="">
+	<TOOL_VERSION Version="2017.4"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="" PART="xczu7cg-ffvc1156-1-e" ARCH="zynquplus" PACKAGE="ffvc1156" DEVICE="xczu7cg" SPEED="-1" LUT="230400" FF="460800" BRAM="312" DSP="1728"/>
+	<HIERARCHY Name="boe_production_test"/>
+	<File Type="HW_HANDOFF" Name="arm_core.hwh" DESIGN_HIERARCHY="u_arm" BD_TYPE="DEFAULT_BD"/>
+	<File Type="BD_TCL" Name="arm_core_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="arm_core_ddr4_1_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="u_arm/ddr4/ddr4_1/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="arm_core_ddr4_1_0_microblaze_mcs_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="arm_core_ddr4_0_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="u_arm/ddr4/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="arm_core_ddr4_0_0_microblaze_mcs_bd.tcl"/>
+	<File Type="PS_FSBL_INIT" Name="psu_init.c"/>
+	<File Type="PS_FSBL_INIT" Name="psu_init.h"/>
+	<File Type="PS_FSBL_INIT_GPL" Name="psu_init_gpl.c"/>
+	<File Type="PS_FSBL_INIT_GPL" Name="psu_init_gpl.h"/>
+	<File Type="PS_INIT_HELP" Name="psu_init.html"/>
+	<File Type="PS_XMD_INIT" Name="psu_init.tcl"/>
+	<File Type="PS_PMU_INIT" Name="psu_pmucfg.c"/>
+	<File Type="BIT" Name="boe_production_test.bit"/>
+	<File Type="MMI" Name="boe_production_test.mmi"/>
+	<USEDRESOURCES LUT="0" FF="112072" BRAM="114" DSP="6"/>
+</Project>
+

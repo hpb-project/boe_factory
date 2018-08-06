@@ -27,8 +27,8 @@
 /* Number of Fabric Resets */
 #define XPAR_NUM_FABRIC_RESETS 1
 
-#define STDIN_BASEADDRESS 0xFE800000
-#define STDOUT_BASEADDRESS 0xFE800000
+#define STDIN_BASEADDRESS 0xFF000000
+#define STDOUT_BASEADDRESS 0xFF000000
 
 /******************************************************************/
 
@@ -216,27 +216,6 @@
 #define XPAR_AXIPMON_3_S_AXI4_BASEADDR 0x00000000U
 #define XPAR_AXIPMON_3_S_AXI4_HIGHADDR 0x00000000U
 #define XPAR_AXIPMON_3_ENABLE_32BIT_FILTER_ID 1U
-
-
-/******************************************************************/
-
-/* Definitions for driver CANPS */
-#define XPAR_XCANPS_NUM_INSTANCES 1
-
-/* Definitions for peripheral PSU_CAN_1 */
-#define XPAR_PSU_CAN_1_DEVICE_ID 0
-#define XPAR_PSU_CAN_1_BASEADDR 0xFF070000
-#define XPAR_PSU_CAN_1_HIGHADDR 0xFF07FFFF
-#define XPAR_PSU_CAN_1_CAN_CLK_FREQ_HZ 100000000
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral PSU_CAN_1 */
-#define XPAR_XCANPS_0_DEVICE_ID XPAR_PSU_CAN_1_DEVICE_ID
-#define XPAR_XCANPS_0_BASEADDR 0xFF070000
-#define XPAR_XCANPS_0_HIGHADDR 0xFF07FFFF
-#define XPAR_XCANPS_0_CAN_CLK_FREQ_HZ 100000000
 
 
 /******************************************************************/
@@ -651,19 +630,19 @@
 /* Definitions for driver IICPS */
 #define XPAR_XIICPS_NUM_INSTANCES 1
 
-/* Definitions for peripheral PSU_I2C_1 */
-#define XPAR_PSU_I2C_1_DEVICE_ID 0
-#define XPAR_PSU_I2C_1_BASEADDR 0xFF030000
-#define XPAR_PSU_I2C_1_HIGHADDR 0xFF03FFFF
-#define XPAR_PSU_I2C_1_I2C_CLK_FREQ_HZ 100000000
+/* Definitions for peripheral PSU_I2C_0 */
+#define XPAR_PSU_I2C_0_DEVICE_ID 0
+#define XPAR_PSU_I2C_0_BASEADDR 0xFF020000
+#define XPAR_PSU_I2C_0_HIGHADDR 0xFF02FFFF
+#define XPAR_PSU_I2C_0_I2C_CLK_FREQ_HZ 100000000
 
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral PSU_I2C_1 */
-#define XPAR_XIICPS_0_DEVICE_ID XPAR_PSU_I2C_1_DEVICE_ID
-#define XPAR_XIICPS_0_BASEADDR 0xFF030000
-#define XPAR_XIICPS_0_HIGHADDR 0xFF03FFFF
+/* Canonical definitions for peripheral PSU_I2C_0 */
+#define XPAR_XIICPS_0_DEVICE_ID XPAR_PSU_I2C_0_DEVICE_ID
+#define XPAR_XIICPS_0_BASEADDR 0xFF020000
+#define XPAR_XIICPS_0_HIGHADDR 0xFF02FFFF
 #define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 100000000
 
 
@@ -857,7 +836,7 @@
 #define XPAR_PSU_SD_1_SDIO_CLK_FREQ_HZ 187500000
 #define XPAR_PSU_SD_1_HAS_CD 1
 #define XPAR_PSU_SD_1_HAS_WP 1
-#define XPAR_PSU_SD_1_BUS_WIDTH 8
+#define XPAR_PSU_SD_1_BUS_WIDTH 4
 #define XPAR_PSU_SD_1_MIO_BANK 1
 #define XPAR_PSU_SD_1_HAS_EMIO 0
 
@@ -872,7 +851,7 @@
 #define XPAR_XSDPS_0_SDIO_CLK_FREQ_HZ 187500000
 #define XPAR_XSDPS_0_HAS_CD 1
 #define XPAR_XSDPS_0_HAS_WP 1
-#define XPAR_XSDPS_0_BUS_WIDTH 8
+#define XPAR_XSDPS_0_BUS_WIDTH 4
 #define XPAR_XSDPS_0_MIO_BANK 1
 #define XPAR_XSDPS_0_HAS_EMIO 0
 
@@ -1031,7 +1010,7 @@
 /******************************************************************/
 
 /* Definitions for driver UARTPS */
-#define XPAR_XUARTPS_NUM_INSTANCES 2
+#define XPAR_XUARTPS_NUM_INSTANCES 1
 
 /* Definitions for peripheral PSU_UART_0 */
 #define XPAR_PSU_UART_0_DEVICE_ID 0
@@ -1039,14 +1018,6 @@
 #define XPAR_PSU_UART_0_HIGHADDR 0xFF00FFFF
 #define XPAR_PSU_UART_0_UART_CLK_FREQ_HZ 100000000
 #define XPAR_PSU_UART_0_HAS_MODEM 0
-
-
-/* Definitions for peripheral PSU_UART_1 */
-#define XPAR_PSU_UART_1_DEVICE_ID 1
-#define XPAR_PSU_UART_1_BASEADDR 0xFF010000
-#define XPAR_PSU_UART_1_HIGHADDR 0xFF01FFFF
-#define XPAR_PSU_UART_1_UART_CLK_FREQ_HZ 100000000
-#define XPAR_PSU_UART_1_HAS_MODEM 0
 
 
 /******************************************************************/
@@ -1057,13 +1028,6 @@
 #define XPAR_XUARTPS_0_HIGHADDR 0xFF00FFFF
 #define XPAR_XUARTPS_0_UART_CLK_FREQ_HZ 100000000
 #define XPAR_XUARTPS_0_HAS_MODEM 0
-
-/* Canonical definitions for peripheral PSU_UART_1 */
-#define XPAR_XUARTPS_1_DEVICE_ID XPAR_PSU_UART_1_DEVICE_ID
-#define XPAR_XUARTPS_1_BASEADDR 0xFF010000
-#define XPAR_XUARTPS_1_HIGHADDR 0xFF01FFFF
-#define XPAR_XUARTPS_1_UART_CLK_FREQ_HZ 100000000
-#define XPAR_XUARTPS_1_HAS_MODEM 0
 
 
 /******************************************************************/

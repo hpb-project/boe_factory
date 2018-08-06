@@ -2,7 +2,7 @@
 the_ROM_image:
 {
 	[fsbl_config]a53_x64
-	[bootloader]/home/luxq/work/boe_factory/boe_factory_fsbl/Debug/boe_factory_fsbl.elf
-	[destination_device = pl]/home/luxq/work/boe_factory/boe_factory/boe_production_test.bit
-	[destination_cpu = a53-0]/home/luxq/work/boe_factory/boe_factory_test/Debug/boe_factory_test.elf
+	[bootloader]/home/luxq/boe_factory/boe_factory_fsbl/Debug/boe_factory_fsbl.elf
+	[destination_device = pl]/home/luxq/boe_factory/boe_factory/boe_production_test.bit
+	[destination_cpu = a53-0]/home/luxq/boe_factory/boe_factory_test/Debug/boe_factory_test.elf
 }

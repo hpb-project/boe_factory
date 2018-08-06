@@ -43,7 +43,7 @@ all: boe_factory_test.elf secondary-outputs
 boe_factory_test.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM v8 gcc linker'
-	aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../boe_factory_fsbl_bsp/psu_cortexa53_0/lib -o "boe_factory_test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L"/home/luxq/boe_factory/boe_factory_fsbl_bsp/psu_cortexa53_0/lib" -o "boe_factory_test.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

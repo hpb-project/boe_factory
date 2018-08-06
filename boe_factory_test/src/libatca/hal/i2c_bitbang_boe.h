@@ -43,8 +43,8 @@
 
 
 #define MAX_I2C_BUSES   1       //The MAX_I2C_BUSES is the number of free pins in samd21 xplained pro
-#define BOE_I2C_DAT         (15)
-#define BOE_I2C_SCL			(14)
+#define BOE_I2C_DAT         (29)
+#define BOE_I2C_SCL			(28)
 #define BOE_INPUT       (0)
 #define BOE_OUTPUT      (1)
 

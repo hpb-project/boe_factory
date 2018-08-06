@@ -30,7 +30,7 @@
 								</option>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.562349181" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="    " valueType="string"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.453314110" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="/home/luxq/work/boe_factory/boe_factory_test/src/libatca"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/libatca}&quot;"/>
 								</option>
 								<option id="xilinx.gnu.compiler.symbols.defined.1832676414" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="ATCAPRINTF"/>
@@ -48,7 +48,7 @@
 							<tool id="xilinx.gnu.arm.a53.toolchain.archiver.1906877961" name="ARM v8 archiver" superClass="xilinx.gnu.arm.a53.toolchain.archiver"/>
 							<tool id="xilinx.gnu.arm.a53.c.toolchain.linker.debug.2058275586" name="ARM v8 gcc linker" superClass="xilinx.gnu.arm.a53.c.toolchain.linker.debug">
 								<option id="xilinx.gnu.linker.inferred.swplatform.lpath.1853582138" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths">
-									<listOptionValue builtIn="false" value="../../boe_factory_fsbl_bsp/psu_cortexa53_0/lib"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boe_factory_fsbl_bsp/psu_cortexa53_0/lib}&quot;"/>
 								</option>
 								<option id="xilinx.gnu.linker.inferred.swplatform.flags.655253534" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,--end-group"/>
