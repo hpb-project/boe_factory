@@ -97,6 +97,41 @@ int mainloop(void)
 
     return 0;
 }
+
+void selftest()
+{
+	int status = 0;
+	status = flashtest();
+	if(status != XST_SUCCESS){
+		xil_printf("flash test failed.\r\n");
+		goto failed;
+	}
+	status = memtest();
+	if(status != XST_SUCCESS){
+		xil_printf("memtest failed.\r\n");
+		goto failed;
+	}
+	status = at508_test();
+	if(status != XST_SUCCESS){
+		xil_printf("at508 test failed.\r\n");
+		goto failed;
+	}
+#if 0
+	status = ffs_sd_test();
+	if(status != XST_SUCCESS){
+		xil_printf("ffs sd test failed.\r\n");
+		goto failed;
+	}
+#endif
+
+failed:
+	if(status == 0){
+		ledSuccess();
+	}else{
+		ledFailed();
+	}
+	return ;
+}
 int main()
 {
     int status = 0;
@@ -112,6 +147,8 @@ int main()
     // 系统启动，亮第一个灯
     ledHigh(LED_1);
 
+    // self test
+    //selftest();
 
     // 3. enter mainloop.
     mainloop();
